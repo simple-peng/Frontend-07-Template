@@ -154,13 +154,11 @@
     }
     function Expression(source){
       if(source[0].type === "AdditiveExpression" && source[1] && source[1].type === "EOF"){
-        debugger
         let node = {
           type:"Expression",
           children:[source.shift(),source.shift()]
         }
         source.unshift(node)
-        console.log("node:",node)
         return node
       }
       AdditiveExpression(source)
