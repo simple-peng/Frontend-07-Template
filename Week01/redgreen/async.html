@@ -40,27 +40,30 @@
   </div>
   <script type="text/javascript">
     function green(){
-      var lights = document.getElementsByClassName('circle')
-      for(var i = 0;i<3;i++){
+      let lights = document.querySelectorAll("div")
+      let green = document.getElementsByClassName("green")[0]
+      for(let i = 0;i < 3;i++){
         lights[i].classList.remove("light")
-        document.getElementsByClassName("green")[0].classList.add('light')
       }
-    }
-
-    function red(){
-      var lights = document.getElementsByClassName('circle')
-      for(var i = 0;i<3;i++){
-        lights[i].classList.remove("light")
-        document.getElementsByClassName("red")[0].classList.add('light')
-      }
+      green.classList.add("light")
     }
 
     function yellow(){
-      var lights = document.getElementsByClassName('circle')
-      for(var i = 0;i<3;i++){
+      let lights = document.querySelectorAll("div")
+      let yellow = document.getElementsByClassName("yellow")[0]
+      for(let i = 0;i < 3;i++){
         lights[i].classList.remove("light")
-        document.getElementsByClassName("yellow")[0].classList.add('light')
       }
+      yellow.classList.add("light")
+    }
+    
+    function red(){
+      let lights = document.querySelectorAll("div")
+      let red = document.getElementsByClassName("red")[0]
+      for(let i = 0;i < 3;i++){
+        lights[i].classList.remove("light")
+      }
+      red.classList.add("light")
     }
 
     function sleep(time){
@@ -79,7 +82,7 @@
         await sleep(1000)
       }
     }
-    go()
+    // go()
   </script>
 </body>
 </html>
